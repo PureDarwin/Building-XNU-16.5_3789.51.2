@@ -4,13 +4,13 @@ For Building XNU 16.5 from start to finish
 
 #**README for Building XNU 16.5 (xnu-3789.51.2)**
 
-###Requirements macOS 10.12.4 and Xcode 8.3
+Requirements macOS 10.12.4 and Xcode 8.3
 
-####**These must be done in order or it will not build**
+**These must be done in order or it will not build**
 
 Open terminal.app // copy each command in as you go.   
 
-####Creating workspace
+Creating workspace
 *************************************
 > mkdir -p ~/Desktop/xnu_build   
 ************************************
