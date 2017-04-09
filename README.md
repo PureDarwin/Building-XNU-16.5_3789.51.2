@@ -2,7 +2,7 @@
 For Building XNU 16.5 from start to finish
 
 
-#**README for Building XNU 16.5 (xnu-3789.51.2)**
+# **README for Building XNU 16.5 (xnu-3789.51.2)**
 
 Requirements macOS 10.12.4 and Xcode 8.3
 
@@ -22,7 +22,7 @@ mkdir -p ~/Desktop/xnu_build
 cd ~/Desktop/xun_build
 ```
 
-####Curling needed Sources
+#### Curling needed Sources
 ************************************
 >
 ```
@@ -33,14 +33,14 @@ curl -O https://opensource.apple.com/tarballs/libdispatch/libdispatch-703.50.37.
 curl -O https://opensource.apple.com/tarballs/libplatform/libplatform-126.50.8.tar.gz
 ```
 
-####Extracting and Removing Tar.gz files
+#### Extracting and Removing Tar.gz files
 ************************************
 >
 ```
 for file in *.tar.gz; do tar -zxf $file; done && rm -f *.tar.gz
 ```
 
-####Building Dtrace's CTF"s Bianries
+#### Building Dtrace's CTF"s Bianries
 ************************************
 >
 ```
@@ -65,7 +65,7 @@ xcodebuild install -target ctfconvert -target ctfdump -target ctfmerge ARCHS="x8
 sudo ditto $PWD/dst/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain   
 ```
 
-####Installing Availability
+#### Installing Availability
 ************************************
 >
 ```
@@ -108,7 +108,7 @@ make installhdrs SDKROOT=macosx ARCH_CONFIGS=X86_64 SRCROOT=$PWD OBJROOT=$PWD/BU
 sudo xcodebuild installhdrs -project libsyscall/Libsyscall.xcodeproj -sdk macosx ARCHS='x86_64 i386' SRCROOT=$PWD/libsyscall OBJROOT=$PWD/BUILD.hdrs/obj SYMROOT=$PWD/BUILD.hdrs/sym DSTROOT=$PWD/BUILD.hdrs/dst   
 ```
 
-###Copying libplatform source needed for libfirehose_kernel.a
+### Copying libplatform source needed for libfirehose_kernel.a
 ************************************
 > 
 ```
@@ -120,7 +120,7 @@ cd ../libplatform-126.50.8
 sudo ditto $PWD/include `xcrun -sdk macosx -show-sdk-path`/usr/local/include   
 ```
 
-####Building libfirehose_kernel.a
+#### Building libfirehose_kernel.a
 ************************************
 > 
 ```
@@ -139,7 +139,7 @@ sudo xcodebuild install -project libdispatch.xcodeproj -target libfirehose_kerne
 ```
 sudo ditto $PWD/dst/usr/local `xcrun -sdk macosx -show-sdk-path`/usr/local
 ```
-####Building XNU
+#### Building XNU
 ************************************
 > 
 ```
