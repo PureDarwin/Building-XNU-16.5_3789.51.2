@@ -1,9 +1,5 @@
-# Building-XNU-16.5-xnu-3789.51.2-
-For Building XNU 16.5 from start to finish
-
-
 # **README for Building XNU 16.5 (xnu-3789.51.2)**
-
+For Building XNU 16.5 from start to finish
 Requirements macOS 10.12.4 and Xcode 8.3
 
 **These must be done in order or it will not build**
@@ -84,7 +80,7 @@ make install SRCROOT=$PWD DSTROOT=$PWD/dst
 ************************************
 >
 ```
-sudo ditto $PWD/dst/usr/local `xcrun -sdk macosx -show-sdk-path` /usr/local
+sudo ditto $PWD/dst/usr/local `xcrun -sdk macosx -show-sdk-path`/usr/local
 ```
 #### Installing Headers to build libfirehose_kernel.a for XNU
 ************************************
