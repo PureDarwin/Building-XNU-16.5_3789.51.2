@@ -15,7 +15,7 @@ mkdir -p ~/Desktop/xnu_build
 ************************************
 >
 ```
-cd ~/Desktop/xun_build
+cd ~/Desktop/xnu_build
 ```
 
 #### Curling needed Sources
